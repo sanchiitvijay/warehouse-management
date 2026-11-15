@@ -46,7 +46,7 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteByID(
-            @RequestParam UUID id
+            @PathVariable UUID id
     ){
         productService.deleteById(id);
         return ResponseEntity.noContent().build();
